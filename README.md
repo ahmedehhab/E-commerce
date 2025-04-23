@@ -48,6 +48,7 @@ A comprehensive backend API for a health and fitness application built with Node
 ## 📂 API Structure
 
 The API is organized into logical modules:
+
 src/
 ├── auth/       # Authentication & user registration
 ├── brand/      # Brand management
@@ -116,25 +117,40 @@ src/
 - `PUT /user/:id` - Update user information
 - `PUT /user/block/:id` - Block user account
 
-🧪 Testing API Endpoints
-You can test all API endpoints using our Postman collection:
-Open Postman Collection
-📊 Database Schema
+## 🧪 Testing API Endpoints
+
+You can test all API endpoints using our comprehensive Postman collection:
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/science-operator-17215056/workspace/e-commerce/collection/42944348-edb6797c-3390-4493-ae81-08dac58d87c4?action=share&creator=42944348)
+
+The collection includes pre-configured requests for every endpoint with example payloads and environment variables for easy testing.
+
+## 📊 Database Schema
+
 Our MongoDB schema is organized into the following main collections:
 
-Users
-Products
-Categories
-Brands
-Carts
-Orders
-Coupons
+| Collection | Description |
+|------------|-------------|
+| **Users** | Account details, authentication info, and user preferences |
+| **Products** | Product listings with details, pricing, and inventory status |
+| **Categories** | Hierarchical product categorization system |
+| **Brands** | Brand information and associated category relationships |
+| **Carts** | User shopping carts with selected products and quantities |
+| **Orders** | Complete order history with status tracking and delivery info |
+| **Coupons** | Discount codes with validation rules and usage limits |
 
-🛡️ Security Features
+Each collection implements data validation and maintains appropriate relationships with other collections.
 
-JWT-based authentication
-Password hashing
-Request rate limiting
-XSS protection
-Secure HTTP headers
-Input validation
+## 🛡️ Security Features
+
+The API implements industry-standard security practices:
+
+- **JWT-based Authentication**: Secure token-based user authentication
+- **Password Hashing**: Bcrypt algorithm for secure password storage
+- **Request Rate Limiting**: Protection against brute force and DoS attacks
+- **XSS Protection**: Prevention of cross-site scripting vulnerabilities
+- **Secure HTTP Headers**: Properly configured security headers via Helmet
+- **Input Validation**: Thorough request validation using Joi
+- **CSRF Protection**: Safeguards against cross-site request forgery
+- **Sanitized Database Queries**: Prevention of NoSQL injection attacks
+- **Comprehensive Error Handling**: Secure error responses without sensitive info
