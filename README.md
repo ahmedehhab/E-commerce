@@ -1,4 +1,4 @@
-# 🏋️‍♂️ Health and Fitness App Backend
+# 🏋️‍♂️ E-commerce App backend 
 
 A comprehensive backend API for a health and fitness application built with Node.js and Express. This API provides robust functionality for user management, product catalogs, shopping carts, order processing, secure payments, and more.
 
